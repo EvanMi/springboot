@@ -44,8 +44,9 @@ public class LogAdvice extends RequestBodyAdviceAdapter implements ResponseBodyA
 
     @Override
     public Object afterBodyRead(Object body, HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
-        logEntity.setParams(request.getParameterMap());
-        logEntity.setPath(request.getServletPath());
+        // 移动到拦截器中
+        // logEntity.setParams(request.getParameterMap());
+        // logEntity.setPath(request.getServletPath());
         logEntity.setReq(body);
         return body;
     }
@@ -53,7 +54,8 @@ public class LogAdvice extends RequestBodyAdviceAdapter implements ResponseBodyA
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
         logEntity.setResp(body);
-        log.info("controller 请求日志：{}", JSON.toJSONString(logEntity));
+        //移动到拦截器中
+        //log.info("controller 请求日志：{}", JSON.toJSONString(logEntity));
         return body;
     }
 }
