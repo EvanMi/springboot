@@ -1,7 +1,5 @@
 package com.yumi.springboot.log;
 
-// An highlighted block
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
