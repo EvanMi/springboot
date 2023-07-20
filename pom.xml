@@ -37,6 +37,24 @@
 			<artifactId>fastjson2</artifactId>
 			<version>2.0.26</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.openjdk.jol</groupId>
+			<artifactId>jol-core</artifactId>
+			<version>0.17</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjdk.jcstress</groupId>
+			<artifactId>jcstress-core</artifactId>
+			<version>0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjdk.jcstress</groupId>
+			<artifactId>jcstress-samples</artifactId>
+			<version>0.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>
